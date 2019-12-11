@@ -1,10 +1,14 @@
-const tab = [/* input */]
-let res = 0
+const input = [/* input */]
 
 function computeFuel(i) {
     return Math.floor(i / 3) - 2
 }
 
-tab.forEach((e) => res += computeFuel(e))
+function computeTotalFuel(tab) {
+    let res = 0
 
-console.log("Résultat :", res)
+    tab.forEach((e) => res += computeFuel(e))
+    return res
+}
+
+module.exports = computeTotalFuel

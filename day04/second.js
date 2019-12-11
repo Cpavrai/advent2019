@@ -31,4 +31,9 @@ function getGoodNumbers(input) {
   return res
 }
 
-console.log("Résultat :", getGoodNumbers(input).length)
+// console.log("Résultat :", getGoodNumbers(input).length)
+
+module.exports = {
+  isGood: isGood,
+  getGoodNumbers: getGoodNumbers
+};

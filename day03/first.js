@@ -12,7 +12,9 @@ function getLastPoint(instructions) {
     })
     let res = final_point.findCross()
     res = res.sort((a, b) => a.value - b.value)
-    console.log("Resultat :", res[0].value)
+    return res
 }
 
-getLastPoint(input)
+// console.log("Resultat :", getLastPoint(input)[0].value)
+
+module.exports = getLastPoint

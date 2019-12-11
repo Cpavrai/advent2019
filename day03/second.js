@@ -4,6 +4,7 @@ const input = [/*input*/]
 
 function getClosestCross(instructions) {
     var final_point = new Point()
+
     instructions.forEach((value, key) => {
         value.forEach((e) => {
             final_point.move(e[0], parseInt(e.slice(1)), key + 1)
@@ -12,7 +13,9 @@ function getClosestCross(instructions) {
     })
     let res = final_point.findCross()
     res = res.sort((a, b) => a.steps - b.steps)
-    console.log("Resultat :", res[0].steps)
+    return res
 }
 
-getClosestCross(input)
+// console.log("Resultat :", getClosestCross(input)[0].steps)
+
+module.exports = getClosestCross

@@ -27,15 +27,19 @@ function compute(tab) {
     return tab;
 }
 
-while (compute(recuperateState(tab, fi, si))[0] != 19690720 && fi < 99) {
-    if (si < 99) si++;
-    else if (fi < 99) {
-        fi++
-        si = 0
+
+function findResult() {
+    while (compute(recuperateState(tab, fi, si))[0] != 19690720 && fi < 99) {
+        if (si < 99) si++;
+        else if (fi < 99) {
+            fi++
+            si = 0
+        }
     }
+    if (si == 99 && fi == 99)
+        console.error("No solution")
+    else
+        console.log(`Résultat : noun = ${fi} & verb = ${si}`)
 }
 
-if (si == 99 && fi == 99)
-    console.error("No solution")
-else
-    console.log(`Résultat : noun = ${fi} & verb = ${si}`)
+findResult()
