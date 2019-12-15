@@ -1,4 +1,4 @@
-const input = /*"input"*/;
+const input = /*input*/"";
 
 function productPicture(str, size={x:25,y:6}) {
 	let res = str.substr(0, size.x * size.y), y = 0, x;
