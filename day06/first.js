@@ -33,4 +33,4 @@ module.exports = {
 	sumOrbits: sumOrbits
 }
 
-console.log(sumOrbits(input));
+// console.log(sumOrbits(input));
