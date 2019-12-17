@@ -1,8 +1,5 @@
 class Moon {
-    position;
-    velocity;
-    id;
-
+    
     constructor(new_position, new_id) {
         this.id = new_id;
         this.position = new_position;
@@ -11,6 +8,7 @@ class Moon {
             y: 0,
             z: 0
         };
+        return this;
     }
 
     computeVelocity(other_moons) {
@@ -32,7 +30,8 @@ class Moon {
     }
 
     computePosition() {
-        ["x","y","z"].forEach((key) => this.position[key] += this.velocity[key]);
+        const tab = ["x","y","z"]
+        tab.forEach((key) => this.position[key] += this.velocity[key]);
         return this;
     }
 
