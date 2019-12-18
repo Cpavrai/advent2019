@@ -4,7 +4,8 @@
   "description": "Code versioning for solving the Code Advent Calendar of 2019",
   "main": "main.js",
   "scripts": {
-    "test": "mocha --recursive './day*/*.spec.js'"
+    "test": "mocha --recursive './day*/*.spec.js'",
+    "watch": "mocha --recursive --watch './day*/*.spec.js'"
   },
   "repository": {
     "type": "git",
